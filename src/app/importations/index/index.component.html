@@ -1,0 +1,22 @@
+<div class="container">
+  <h1>Hubla Challenge - Importation</h1>
+
+  <a href="#" routerLink="/importations/create/" class="btn btn-success">Create New Importation</a>
+
+  <table class="table table-bordered">
+    <tr>
+      <th>ID</th>
+      <th>Created At</th>
+      <th width="220px">Action</th>
+    </tr>
+    <tr *ngFor="let importation of importations">
+      <td>{{ importation.id }}</td>
+      <td>{{ importation.createdAt }}</td>
+      <td>
+        <a href="#" [routerLink]="['/importations/', importation.id, 'view']" class="btn btn-info">View</a>
+        <a href="#" [routerLink]="['/importations/', importation.id, 'edit']" class="btn btn-primary">Edit</a>
+        <button type="button" (click)="deleteImportation(importation.id)" class="btn btn-danger">Delete</button>
+      </td>
+    </tr>
+  </table>
+</div>

@@ -1,0 +1,24 @@
+<div class="container">
+  <h1>Update Product</h1>
+
+  <a href="#" routerLink="/product/index" class="btn btn-primary">Back</a>
+
+  <form [formGroup]="form" (ngSubmit)="submit()">
+
+    <div class="form-group">
+      <label for="description">Description</label>
+      <textarea
+        formControlName="description"
+        id="description"
+        type="text"
+        [(ngModel)]="product.description"
+        class="form-control">
+            </textarea>
+      <div *ngIf="f.description.touched && f.description.invalid" class="alert alert-danger">
+        <div *ngIf="f.description.errors?.required">Description is required.</div>
+      </div>
+    </div>
+
+    <button class="btn btn-primary" type="submit" [disabled]="!form.valid">Update</button>
+  </form>
+</div>

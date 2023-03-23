@@ -1,0 +1,35 @@
+<div class="container">
+  <h1>View Transaction</h1>
+
+  <a href="#" routerLink="/transactions/index" class="btn btn-primary">Back</a>
+
+  <div>
+    <strong>ID:</strong>
+    <p>{{ transaction.id }}</p>
+  </div>
+
+  <div>
+    <strong>Product:</strong>
+    <p>{{ transaction.product.description  }}</p>
+  </div>
+
+  <div>
+    <strong>Seller:</strong>
+    <p>{{ transaction.seller.name }}</p>
+  </div>
+
+  <div>
+    <strong>Value:</strong>
+    <p>{{ transaction.valueTransaction }}</p>
+  </div>
+
+  <div>
+    <strong>Type:</strong>
+    <p>{{ transaction.type }}</p>
+  </div>
+  <div>
+    <strong>Created At:</strong>
+    <p>{{ transaction.createdAt }}</p>
+  </div>
+
+</div>
